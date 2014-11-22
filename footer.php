@@ -1,4 +1,4 @@
-<script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation/foundation.js"></script>
         <script src="js/foundation/foundation.dropdown.js"></script>
         <script lang="javascript">
