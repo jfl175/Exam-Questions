@@ -7,7 +7,7 @@
         session_start();
     }
     require_once("header.php");
-    include_once("functions.php");
-    include_once("home.php"); 
+    require_once("functions.php");
+    require_once("home.php"); 
     require_once("footer.php");
 ?>

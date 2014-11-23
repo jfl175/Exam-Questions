@@ -1,5 +1,3 @@
 <head>
-	<?php  
-	content added.	
-	?>
+	checking if this branch is working.
 </head>
