@@ -1,85 +1,93 @@
 <?php 
-    $page_title = "Admin Login";
+    $page_title = "Exam-Questions | Admin Login";
+    $nav_title  = "Admin Login"
 ?>
 
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?=$page_title?></title>
-    <link rel="stylesheet" href="../css/foundation.css" />
-    <script src="../js/vendor/modernizr.js"></script>
-    <style>
-    	body, .panel
-    	{
-    		background: #222222;
-    	}
-    	body, h3
-    	{
-    		color: #AAAAAA;
-    	}
-        h3
-        {
-          margin-left: 15px;
-          margin-right: 15px;
-        }
-        label
-        {
-          color: #AAAAAA;
-          cursor: default;
-        }
-    </style>
-  </head>
-
-<!--     <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1>
-              <a href="../examquestions/">
-                
-              </a>
-            </h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
-    </nav>  -->
-<body>
-<div class="row">
-<br><br><br><br>
-    <div class="large-8 columns">
-        <ul class="small-block-grid-1 medium-block-grid-3">
-          <li>
-            <dl class="accordion" data-accordion="myAccordionGroup">
-              <dd class="accordion-navigation">
-                <a href="#panel1c">Login</a>
-                <div id="panel1c" class="content">
-                  <div class="panel callout raduis">
-                      
-                  </div>
-                </div>
-              </dd>
-              <dd class="accordion-navigation">
-                <a href="#panel2c">Forgot Password</a>
-                <div id="panel2c" class="content">
-                    If you've forgotten password, please contact any other website adminstrator.
-                </div>
-              </dd>
-            </dl>
-          </li>
-        </ul>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><?=$page_title?></title>
+        <link rel="stylesheet" href="../css/foundation.css" />
+        <style>
+        	body, .panel
+        	{
+        		background: #333333;
+        	}
+        	body, h3
+        	{
+        		color: #AAAAAA;
+        	}
+            h3
+            {
+              margin-left: 15px;
+              margin-right: 15px;
+            }
+            label
+            {
+              color: #AAAAAA;
+              cursor: default;
+            }
+            footer
+            {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: #333333;
+            }
+            footer p
+            {
+                text-align: right;
+            }
+            .custom
+            {
+                border: 0px;
+            }
+        </style>
+    </head>
+    <div class="fixed">
+        <nav class="top-bar" data-topbar role="navigation" data-options="sticky-on: large" >
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="../../exam-questions/"><?=$nav_title?></a></h1>
+                </li>
+                <li class="divider"></li>
+                <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li> -->
+            </ul>
+        </nav> 
     </div>
-</div>
-<script src="../js/vendor/jquery.js"></script>
-<script src="../js/foundation/foundation.js"></script>
-<script src="../js/foundation/foundation.accordion.js"></script>
-<script>
-  $(document).foundation({
-    accordion: {
-      callback : function (accordion) {
-        console.log(accordion);
-      }
-    }
-  });
-</script>
-</body>
+    <body>
+    <div class="row">
+        <br><br><br><br><br><br><br><br><br>
+        <div class="hide-for-small-only hide-for-medium-only">
+            <br><br><br><br><br>
+        </div>
+        <div class="panel custom large-4 medium-6 small-11 small-centered columns">
+            <form method="POST" action="<?$_SERVER['PHP_SELF']?>">
+                <input type="text" placeholder="Username">                        
+                <input type="password" placeholder="Password">
+                <input type="submit" class="button small success" value="Login">
+            </form>
+        </div>
+        <br><br><br><br><br><br><br>
+
+    </div>
+    <footer>
+        <br>
+        <div class="large-12 columns">
+            <!-- <div class="large-6 columns"> -->
+                <p>John<br>Copyright ©2014, All Rights Reserved</p>
+            <!-- </div> -->
+        </div>
+        <script src="../js/vendor/modernizr.js"></script>
+        <script src="../js/vendor/jquery.js"></script>
+        <script src="../js/foundation/foundation.js"></script>
+        <script src="js/foundation/foundation.topbar.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </footer>       
+    </body>
+</html>
